@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    tools:context="com.example.news_feed.MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        app:titleTextColor="@android:color/white" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewFeeds"
+        android:layout_width="match_parent"
+        tools:listitem="@layout/feed_item"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:backgroundTint="@color/colorWhite"
+        android:layout_alignBottom="@id/developedBy"
+        android:layout_marginBottom="30dp"
+        android:background="@color/colorWhite"/>
+
+    <TextView
+        android:id="@+id/developedBy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Desenvolvido por: Tércio Tales"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/colorWhite"
+        android:textSize="15sp" />
+
+</RelativeLayout>
